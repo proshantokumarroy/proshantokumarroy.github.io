@@ -1,22 +1,39 @@
-// DOM থেকে বাটনটিকে 가져 আসা
-const backToTopButton = document.getElementById("backToTopBtn");
+// DOM elements গুলোকে সিলেক্ট করা
+const themeToggleButton = document.getElementById('theme-toggle');
+const backToTopButton = document.getElementById('backToTopBtn');
+const body = document.body;
 
-// ব্যবহারকারী যখন নিচে স্ক্রল করবে, তখন কী হবে তার ফাংশন
-window.onscroll = function() {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    // যদি ব্যবহারকারী উপর থেকে 300px এর বেশি নিচে স্ক্রল করে, তাহলে বাটনটি দেখাও
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        backToTopButton.style.display = "block";
-    } else {
-        // অন্যথায়, বাটনটি লুকিয়ে রাখো
-        backToTopButton.style.display = "none";
-    }
+// --- ধাপ ৪.১: পেজ লোড হওয়ার সাথে সাথে সেভ করা থিম চেক এবং প্রয়োগ করা ---
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
 }
 
-// ব্যবহারকারী যখন বাটনে ক্লিক করবে, তখন পেজের শুরুতে ফিরে যাওয়ার ফাংশন
-backToTopButton.onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+// --- ধাপ ৪.২: থিম টগল বাটন ক্লিক করলে থিম পরিবর্তন এবং সেভ করা ---
+themeToggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    // বর্তমান অবস্থাটি localStorage এ সেভ করা
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+
+// --- 'Back to Top' বাটনের কার্যকারিতা (এটি আগের মতোই থাকবে) ---
+window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
 };
+
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
