@@ -1,0 +1,29 @@
+:root {
+    --background-color: #f8f9fa; --card-color: #ffffff; --border-color: #dee2e6; --primary-text-color: #495057; --heading-color: #212529; --link-color: #007bff; --link-hover-color: #0056b3;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', 'Hind Siliguri', sans-serif; margin: 0; padding: 0; line-height: 1.7; color: var(--primary-text-color); background-color: var(--background-color); }
+.container { width: 85%; margin: 0 auto; max-width: 1100px; }
+header { background: var(--card-color); color: var(--heading-color); padding: 1rem 0; border-bottom: 1px solid var(--border-color); position: fixed; width: 100%; top: 0; z-index: 1000; }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+header .logo { margin: 0; font-size: 1.7rem; font-weight: 700; color: var(--heading-color); }
+header nav ul { margin: 0; padding: 0; list-style: none; }
+header nav ul li { display: inline-block; margin-left: 30px; }
+header nav a { text-decoration: none; color: var(--primary-text-color); font-weight: 600; font-size: 1rem; transition: color 0.3s; }
+header nav a:hover { color: var(--link-color); }
+main { padding-top: 85px; }
+.section { padding: 60px 0; text-align: center; }
+.bg-light { background-color: var(--card-color); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+#about .profile-pic { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 25px; border: 6px solid var(--card-color); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); }
+#about .bio { max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--primary-text-color); text-align: left; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; text-align: left; }
+.skill-item { background: var(--card-color); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; border: 1px solid var(--border-color); }
+.skill-item:hover { transform: translateY(-10px) scale(1.03); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09); border-color: var(--link-color); }
+.skill-item h3 { margin-top: 0; margin-bottom: 15px; color: var(--link-color); font-size: 1.4rem; }
+.skill-item p { margin-bottom: 0; font-size: 1.1rem; color: var(--primary-text-color); }
+#contact p { font-size: 1.1rem; margin: 10px 0; color: var(--primary-text-color); }
+#contact .contact-info { margin-top: 30px; }
+#contact a { color: var(--link-color); text-decoration: none; font-weight: 600; }
+#contact a:hover { text-decoration: underline; color: var(--link-hover-color); }
+footer { background: var(--card-color); color: var(--primary-text-color); text-align: center; padding: 25px 0; margin-top: 40px; border-top: 1px solid var(--border-color); }
+@media (max-width: 768px) { header .container { flex-direction: column; } header .logo { margin-bottom: 15px; } main { padding-top: 130px; } .section h2 { font-size: 2rem; } #about .bio { text-align: center; } }
