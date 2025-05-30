@@ -289,3 +289,124 @@ footer {
         text-align: center;
     }
 }
+
+/* ========================================= */
+/* Resume Page - Section Specific Styles   */
+/* ========================================= */
+
+/* --- Education Section --- */
+.education-item {
+    margin-bottom: 25px; /* প্রতিটি শিক্ষাগত যোগ্যতার আইটেমের নিচে ফাঁকা জায়গা */
+    padding-left: 15px; /* বাম পাশে সামান্য প্যাডিং */
+    border-left: 3px solid var(--link-color); /* বাম পাশে একটি অ্যাকসেন্ট বর্ডার */
+}
+
+.education-item:last-child {
+    margin-bottom: 0; /* শেষ আইটেমের নিচে অতিরিক্ত মার্জিন বাদ */
+}
+
+.education-item h3 {
+    font-size: 1.4rem;
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.education-item p {
+    margin: 5px 0;
+    font-size: 1rem; /* সাধারণ লেখার ফন্ট সাইজ */
+    color: var(--primary-text-color);
+    line-height: 1.6;
+}
+
+.education-item p i {
+    margin-right: 8px;
+    width: 16px; /* আইকনগুলোর জন্য নির্দিষ্ট প্রস্থ */
+    text-align: center;
+    color: var(--link-hover-color); /* আইকনের রঙ */
+}
+
+/* --- Skills Section --- */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* স্কিল ক্যাটাগরিগুলো পাশাপাশি দেখানোর জন্য গ্রিড */
+    gap: 30px; /* গ্রিড আইটেমগুলোর মধ্যে ফাঁকা জায়গা */
+}
+
+.skill-category {
+    /* background-color: var(--background-color); -- যদি আলাদা ব্যাকগ্রাউন্ড চান */
+    /* padding: 20px; */
+    /* border-radius: 6px; */
+    /* border: 1px solid var(--border-color); -- যদি প্রতিটি ক্যাটাগরির জন্য বর্ডার চান */
+}
+
+.skill-category h3 {
+    font-size: 1.3rem;
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    /* border-bottom: 1px solid var(--border-color); -- যদি শিরোনামের নিচে বর্ডার চান */
+    /* padding-bottom: 8px; */
+}
+
+.skill-category h3 i {
+    margin-right: 8px;
+    color: var(--link-color);
+}
+
+.skill-category ul {
+    list-style: none; /* বুলেটের স্টাইল বাদ দেওয়া */
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category ul li {
+    color: var(--primary-text-color);
+    font-size: 1rem;
+    padding: 8px 0; /* প্রতিটি স্কিলের উপরে ও নিচে প্যাডিং */
+    /* border-bottom: 1px dashed var(--border-color); -- যদি স্কিলগুলোর মধ্যে ড্যাশড বর্ডার চান */
+    /* background-color: var(--background-color); -- যদি প্রতিটি স্কিল আইটেমের আলাদা ব্যাকগ্রাউন্ড চান */
+    /* margin-bottom: 5px; */
+    /* padding-left: 10px; */
+    /* border-radius: 4px; */
+}
+
+.skill-category ul li:last-child {
+    border-bottom: none; /* শেষ স্কিলের নিচে বর্ডার বাদ */
+}
+
+/* --- Projects Section --- */
+.project-item {
+    margin-bottom: 25px; /* প্রতিটি প্রজেক্ট আইটেমের নিচে ফাঁকা জায়গা */
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--background-color); /* হালকা ভিন্নতা আনার জন্য */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.project-item:last-child {
+    margin-bottom: 0;
+}
+
+.project-item h3 {
+    font-size: 1.4rem;
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project-item p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: var(--primary-text-color);
+    line-height: 1.7;
+}
+
+.project-item p strong { /* Description:, Tools Used:, Status: লেখাগুলো বোল্ড করার জন্য */
+    color: var(--heading-color); /* অথবা var(--link-color) ও ব্যবহার করতে পারেন */
+    font-weight: 600;
+}
+
