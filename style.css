@@ -26,4 +26,27 @@ main { padding-top: 85px; }
 #contact a { color: var(--link-color); text-decoration: none; font-weight: 600; }
 #contact a:hover { text-decoration: underline; color: var(--link-hover-color); }
 footer { background: var(--card-color); color: var(--primary-text-color); text-align: center; padding: 25px 0; margin-top: 40px; border-top: 1px solid var(--border-color); }
+/* Back to Top Button Styles */
+#backToTopBtn {
+    display: none; /* প্রথমে বাটনটি লুকানো থাকবে */
+    position: fixed; /* স্ক্রল করার সময়ও একই জায়গায় থাকবে */
+    bottom: 20px; /* নিচ থেকে দূরত্ব */
+    right: 30px; /* ডানদিক থেকে দূরত্ব */
+    z-index: 99; /* অন্য সবকিছুর উপরে থাকবে */
+    border: none; /* কোনো বর্ডার থাকবে না */
+    outline: none; /* আউটলাইন থাকবে না */
+    background-color: var(--link-color); /* লিঙ্ক বা অ্যাকসেন্ট রঙ ব্যবহার */
+    color: white; /* আইকনের রঙ */
+    cursor: pointer; /* মাউস নিলে পয়েন্টার দেখাবে */
+    padding: 15px; /* ভেতরের ফাঁকা জায়গা */
+    border-radius: 50%; /* গোলাকার আকৃতি */
+    font-size: 18px; /* আইকনের সাইজ */
+    box-shadow: 0 4px_8px rgba(0, 0, 0, 0.2); /* একটি সুন্দর শ্যাডো */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#backToTopBtn:hover {
+    background-color: var(--link-hover-color); /* হোভার করলে রঙ পরিবর্তন হবে */
+    transform: scale(1.1); /* হোভার করলে সামান্য বড় হবে */
+ }
 @media (max-width: 768px) { header .container { flex-direction: column; } header .logo { margin-bottom: 15px; } main { padding-top: 130px; } .section h2 { font-size: 2rem; } #about .bio { text-align: center; } }
